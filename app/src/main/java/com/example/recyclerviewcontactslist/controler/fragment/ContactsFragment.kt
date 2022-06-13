@@ -5,9 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.recyclerviewcontactslist.R
 import com.example.recyclerviewcontactslist.controler.adapter.AdapterContactsList
 import com.example.recyclerviewcontactslist.databinding.FragmentContactsBinding
 import com.example.recyclerviewcontactslist.model.User
@@ -30,11 +28,6 @@ class ContactsFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_ContactsFragment_to_HomeFragment)
-        }
-
         startAdapter()
         setAdapter()
     }
